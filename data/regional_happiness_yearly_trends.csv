@@ -1,0 +1,32 @@
+Region,Year,Avg Happiness,Change from Previous Year
+Western Europe,2015,6.69,0.0
+Western Europe,2016,6.69,0.0
+Western Europe,2017,6.7,0.01
+North America,2015,7.27,0.0
+North America,2016,7.25,-0.02
+North America,2017,7.15,-0.1
+Australia and New Zealand,2015,7.28,0.0
+Australia and New Zealand,2016,7.32,0.04
+Australia and New Zealand,2017,7.3,-0.02
+Middle East and Northern Africa,2015,5.41,0.0
+Middle East and Northern Africa,2016,5.39,-0.02
+Middle East and Northern Africa,2017,5.37,-0.02
+Latin America and Caribbean,2015,6.14,0.0
+Latin America and Caribbean,2016,6.1,-0.04
+Latin America and Caribbean,2017,5.96,-0.14
+Southeastern Asia,2015,5.32,0.0
+Southeastern Asia,2016,5.34,0.02
+Southeastern Asia,2017,5.44,0.1
+Central and Eastern Europe,2015,5.33,0.0
+Central and Eastern Europe,2016,5.37,0.04
+Central and Eastern Europe,2017,5.41,0.04
+Eastern Asia,2015,5.63,0.0
+Eastern Asia,2016,5.62,-0.01
+Eastern Asia,2017,5.5,-0.12
+Sub-Saharan Africa,2015,4.2,0.0
+Sub-Saharan Africa,2016,4.14,-0.06
+Sub-Saharan Africa,2017,4.08,-0.06
+Southern Asia,2015,4.58,0.0
+Southern Asia,2016,4.56,-0.02
+Southern Asia,2017,4.63,0.07
+Unknown,2017,5.19,0.0
