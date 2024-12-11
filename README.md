@@ -3,6 +3,7 @@
 ## 🌍 Project Overview
 
 This comprehensive data science project explores global happiness trends across different regions from 2015 to 2017. By analyzing the World Happiness Report dataset, we uncover insights into the factors that influence happiness scores worldwide.
+This project is part of the project I am following in Dataquest Data Analisys with Python learning path.
 
 ## 🎯 Project Objectives
 
