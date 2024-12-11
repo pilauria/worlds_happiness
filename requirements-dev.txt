@@ -1,0 +1,6 @@
+pytest
+coverage
+matplotlib
+pandas
+seaborn
+numpy

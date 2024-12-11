@@ -99,6 +99,54 @@ For a comprehensive breakdown, refer to:
 - `data/happiness_tables.txt`: Detailed regional statistics
 - `data/regional_happiness_stats.csv`: Raw statistical data
 
+## 🧪 Testing
+
+### Prerequisites
+- Python 3.7+
+- pip
+
+### Install Development Dependencies
+```bash
+pip install -r requirements-dev.txt
+```
+
+### Running Tests
+There are multiple ways to run tests:
+
+#### Option 1: Using Python Test Runner
+```bash
+python run_tests.py
+```
+This will:
+- Install development requirements
+- Run all tests
+- Generate a coverage report
+- Create an HTML coverage report in `htmlcov/`
+
+#### Option 2: Direct Pytest
+```bash
+pytest tests/
+```
+
+#### Option 3: Specific Test Files
+```bash
+# Run specific test file
+pytest tests/test_data_loading.py
+
+# Run specific test
+pytest tests/test_data_loading.py::TestDataLoading::test_csv_files_exist
+```
+
+### Test Types
+- **Data Loading Tests**: Verify data can be loaded correctly
+- **Visualization Tests**: Check plot generation
+- **Statistical Analysis Tests**: Validate calculation accuracy
+
+### Coverage Report
+After running tests, check the coverage report in:
+- Console output
+- `htmlcov/index.html` for detailed HTML report
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
