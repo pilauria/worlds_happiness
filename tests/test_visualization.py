@@ -1,7 +1,11 @@
 import unittest
 import os
+import sys
 import matplotlib.pyplot as plt
 import pandas as pd
+
+# Add project root to Python path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 class TestVisualization(unittest.TestCase):
     def setUp(self):
@@ -9,6 +13,9 @@ class TestVisualization(unittest.TestCase):
         self.notebooks_dir = os.path.join(os.path.dirname(__file__), '..', 'notebooks')
         # Path to data directory
         self.data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
+        
+        # Load the dataset
+        self.df = pd.read_csv(os.path.join(self.data_dir, 'World_Happiness_2015.csv'))
     
     def test_visualization_output(self):
         """Check if visualization script generates output files"""
@@ -33,7 +40,7 @@ class TestVisualization(unittest.TestCase):
         for plot_file in expected_plot_files:
             plot_path = os.path.join(self.data_dir, plot_file)
             self.assertTrue(os.path.exists(plot_path), f"Plot file {plot_file} was not generated")
-    
+
     def test_plot_content(self):
         """Verify basic properties of generated plots"""
         # Load a plot file
@@ -45,14 +52,16 @@ class TestVisualization(unittest.TestCase):
 
 class TestStatisticalAnalysis(unittest.TestCase):
     def setUp(self):
-        # Load the dataset
+        # Path to data directory
         self.data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
-        self.df = pd.read_csv(os.path.join(self.data_dir, 'regional_happiness_stats.csv'))
+        
+        # Load the dataset
+        self.df = pd.read_csv(os.path.join(self.data_dir, 'World_Happiness_2015.csv'))
     
     def test_regional_aggregations(self):
         """Verify regional aggregation calculations"""
         # Group by region and calculate mean
-        regional_means = self.df.groupby('Region')['Happiness_Score'].mean()
+        regional_means = self.df.groupby('Region')['Happiness Score'].mean()
         
         # Check some known regions
         known_regions = [

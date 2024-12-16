@@ -1,11 +1,21 @@
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Load the datasets
-happiness_2015 = pd.read_csv('../data/World_Happiness_2015.csv')
-happiness_2016 = pd.read_csv('../data/World_Happiness_2016.csv')
-happiness_2017 = pd.read_csv('../data/World_Happiness_2017.csv')
+# Use absolute path to load data
+current_dir = os.path.dirname(os.path.abspath(__file__))
+data_path_2015 = os.path.join(current_dir, '..', 'data', 'World_Happiness_2015.csv')
+data_path_2016 = os.path.join(current_dir, '..', 'data', 'World_Happiness_2016.csv')
+data_path_2017 = os.path.join(current_dir, '..', 'data', 'World_Happiness_2017.csv')
+
+happiness_2015 = pd.read_csv(data_path_2015)
+happiness_2016 = pd.read_csv(data_path_2016)
+happiness_2017 = pd.read_csv(data_path_2017)
+
+# Create output directory if it doesn't exist
+output_dir = os.path.join(current_dir, '..', 'data')
+os.makedirs(output_dir, exist_ok=True)
 
 # Standardize column names
 happiness_2015 = happiness_2015.rename(columns={
@@ -72,5 +82,5 @@ plt.ylabel('Mean Happiness Score', fontsize=10)
 # Adjust layout and save
 plt.tight_layout()
 plt.suptitle('World Happiness Trends (2015-2017)', fontsize=16, y=1.02)
-plt.savefig('../data/happiness_trends.png', dpi=300, bbox_inches='tight')
+plt.savefig(os.path.join(output_dir, 'happiness_trends.png'), dpi=300, bbox_inches='tight')
 plt.show()
